@@ -7,8 +7,19 @@ import Loadable from 'ui-component/Loadable';
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
 
+// pages routing
+const PagesChartOfAccounts = Loadable(lazy(() => import('views/pages/accounts/chart-of-accounts/index')));
+const PageControlChartOfAccounts = Loadable(lazy(() => import('views/pages/accounts/chart-of-accounts/control-account/index')));
+const PageControlSubChartOfAccounts = Loadable(
+  lazy(() => import('views/pages/accounts/chart-of-accounts/control-account/sub-control-account/index'))
+);
+const PageControlTransactionChartOfAccounts = Loadable(
+  lazy(() => import('views/pages/accounts/chart-of-accounts/control-account/sub-control-account/transaction-account/index'))
+);
+
 // utilities routing
 const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
+
 const UtilsColor = Loadable(lazy(() => import('views/utilities/Color')));
 const UtilsShadow = Loadable(lazy(() => import('views/utilities/Shadow')));
 
@@ -31,6 +42,32 @@ const MainRoutes = {
         {
           path: 'default',
           element: <DashboardDefault />
+        }
+      ]
+    },
+    {
+      path: 'pages',
+      children: [
+        {
+          path: 'accounts',
+          children: [
+            {
+              path: 'chart-of-accounts',
+              element: <PagesChartOfAccounts />
+            },
+            {
+              path: 'control-account/:id',
+              element: <PageControlChartOfAccounts />
+            },
+            {
+              path: 'sub-control-account/:id/:sub_id',
+              element: <PageControlSubChartOfAccounts />
+            },
+            {
+              path: 'transaction-account/:id',
+              element: <PageControlTransactionChartOfAccounts />
+            }
+          ]
         }
       ]
     },

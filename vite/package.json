@@ -14,8 +14,12 @@
     "@vitejs/plugin-react": "4.3.4",
     "apexcharts": "3.46.0",
     "framer-motion": "11.12.0",
+    "json2csv": "^6.0.0-alpha.2",
+    "jspdf": "^3.0.0",
+    "jspdf-autotable": "^5.0.2",
     "lodash-es": "4.17.21",
     "material-ui-popup-state": "5.3.1",
+    "papaparse": "^5.5.2",
     "react": "18.3.1",
     "react-apexcharts": "1.4.1",
     "react-dom": "18.3.1",
@@ -27,6 +31,7 @@
     "vite": "6.0.2",
     "vite-jsconfig-paths": "2.0.1",
     "web-vitals": "4.2.4",
+    "xlsx": "^0.18.5",
     "yup": "1.4.0"
   },
   "scripts": {
@@ -59,6 +64,7 @@
     "@eslint/compat": "1.2.3",
     "@eslint/eslintrc": "3.2.0",
     "@eslint/js": "9.16.0",
+    "@types/json2csv": "^5.0.7",
     "eslint": "9.16.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-jsx-a11y": "6.10.2",

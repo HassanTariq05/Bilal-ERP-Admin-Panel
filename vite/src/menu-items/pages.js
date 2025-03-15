@@ -1,9 +1,10 @@
 // assets
-import { IconKey } from '@tabler/icons-react';
+import { IconKey, IconWallet } from '@tabler/icons-react';
 
 // constant
 const icons = {
-  IconKey
+  IconKey,
+  IconWallet
 };
 
 // ==============================|| EXTRA PAGES MENU ITEMS ||============================== //
@@ -11,7 +12,7 @@ const icons = {
 const pages = {
   id: 'pages',
   title: 'Pages',
-  caption: 'Pages Caption',
+  // caption: 'Pages Caption',
   icon: icons.IconKey,
   type: 'group',
   children: [
@@ -34,6 +35,21 @@ const pages = {
           type: 'item',
           url: '/pages/register',
           target: true
+        }
+      ]
+    },
+    {
+      id: 'accounts',
+      title: 'Accounts',
+      type: 'collapse',
+      icon: icons.IconWallet,
+      children: [
+        {
+          id: 'chart-of-accounts',
+          title: 'Chart of Accounts',
+          type: 'item',
+          url: '/pages/accounts/chart-of-accounts',
+          target: false
         }
       ]
     }

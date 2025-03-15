@@ -151,8 +151,7 @@ export default function NavItem({ item, level, isParents = false, setSelectedID 
                   color="inherit"
                   sx={{
                     overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    width: 102
+                    textOverflow: 'visible'
                   }}
                 >
                   {item.title}
